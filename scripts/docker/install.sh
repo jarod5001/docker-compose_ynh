@@ -11,6 +11,7 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io
 # sudo systemctl enable --now docker
 sudo usermod -aG docker admin
 newgrp docker
+sudo service docker restart
 
 # Install Docker Compose
 curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url  | grep docker-compose-linux-x86_64 | cut -d '"' -f 4 | wget -qi -
