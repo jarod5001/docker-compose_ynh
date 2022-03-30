@@ -68,6 +68,8 @@ ynh_script_progression --message="Removing app main directory..." --time --weigh
 # Remove the app directory securely
 ynh_secure_remove --file="$final_path"
 
+sudo rm "$final_path" -rf
+
 #=================================================
 # REMOVE DATA DIR
 #=================================================
