@@ -19,4 +19,4 @@ sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 
 # Install yacht.sh
 docker volume create yacht
-docker run -d -p __PORT__:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
+docker run -d -p 8001:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
