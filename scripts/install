@@ -324,7 +324,7 @@ ynh_use_logrotate
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
+# ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
 
 ### `yunohost service add` integrates a service in YunoHost. It then gets
 ### displayed in the admin interface and through the others `yunohost service` commands.
@@ -335,7 +335,7 @@ ynh_script_progression --message="Integrating service in YunoHost..." --time --w
 ###		- As well as the section "INTEGRATE SERVICE IN YUNOHOST" in the restore script
 ###		- And the section "INTEGRATE SERVICE IN YUNOHOST" in the upgrade script
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+# yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
 
 ### Additional options starting with 3.8:
 ###
@@ -356,7 +356,7 @@ yunohost service add $app --description="A short description of the app" --log="
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Starting a systemd service..." --time --weight=1
+# ynh_script_progression --message="Starting a systemd service..." --time --weight=1
 
 ### `ynh_systemd_action` is used to start a systemd service for an app.
 ### Only needed if you have configure a systemd service
@@ -367,7 +367,7 @@ ynh_script_progression --message="Starting a systemd service..." --time --weight
 ###		- And the section "STOP SYSTEMD SERVICE" and "START SYSTEMD SERVICE" in the change_url script
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+# ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
 
 #=================================================
 # SETUP FAIL2BAN
